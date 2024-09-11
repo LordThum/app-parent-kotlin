@@ -33,6 +33,16 @@
                 <version>${vaadin.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.vaadin</groupId>
+                <artifactId>vaadin-core</artifactId>
+                <version>${vaadin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.vaadin</groupId>
+                <artifactId>vaadin-spring-boot-starter</artifactId>
+                <version>${vaadin.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
                 <version>${commons-io.version}</version>
