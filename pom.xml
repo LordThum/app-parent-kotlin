@@ -10,7 +10,7 @@
 
     <groupId>io.github.lordthum</groupId>
     <artifactId>app-parent-kotlin</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.6</version>
     <packaging>pom</packaging>
     <name>app-parent-kotlin</name>
     <description>Parent for Spring Application with Kotlin</description>
@@ -118,6 +118,24 @@
     </dependencies>
 
     <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>test-jar</goal>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -294,19 +312,6 @@
                         <phase>test-compile</phase>
                         <goals>
                             <goal>testCompile</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>test-jar</goal>
-                            <goal>jar</goal>
                         </goals>
                     </execution>
                 </executions>
