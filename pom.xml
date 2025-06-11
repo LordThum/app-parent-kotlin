@@ -323,6 +323,10 @@
                 <extensions>true</extensions>
                 <configuration>
                     <publishingServerId>central</publishingServerId>
+                    <excludeArtifacts>
+                        <artifact>central-publishing-maven-plugin</artifact>
+                        <artifact>maven-gpg-plugin</artifact>
+                    </excludeArtifacts>
                 </configuration>
             </plugin>
             <plugin>
