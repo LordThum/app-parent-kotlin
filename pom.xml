@@ -10,7 +10,7 @@
 
     <groupId>io.github.lordthum</groupId>
     <artifactId>app-parent-kotlin</artifactId>
-    <version>0.0.6</version>
+    <version>0.0.7</version>
     <packaging>pom</packaging>
     <name>app-parent-kotlin</name>
     <description>Parent for Spring Application with Kotlin</description>
@@ -323,10 +323,6 @@
                 <extensions>true</extensions>
                 <configuration>
                     <publishingServerId>central</publishingServerId>
-                    <excludeArtifacts>
-                        <artifact>central-publishing-maven-plugin</artifact>
-                        <artifact>maven-gpg-plugin</artifact>
-                    </excludeArtifacts>
                 </configuration>
             </plugin>
             <plugin>
