@@ -5,23 +5,24 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.2</version>
+        <version>4.0.2</version>
     </parent>
 
     <groupId>io.github.lordthum</groupId>
     <artifactId>app-parent-kotlin</artifactId>
-    <version>0.0.7</version>
+    <version>${revision}</version>
     <packaging>pom</packaging>
     <name>app-parent-kotlin</name>
     <description>Parent for Spring Application with Kotlin</description>
 
     <properties>
-        <java.version>17</java.version>
-        <kotlin.version>1.9.24</kotlin.version>
-        <vaadin.version>24.3.10</vaadin.version>
-        <maven.compiler.target>17</maven.compiler.target>
-        <commons-io.version>2.15.1</commons-io.version>
+        <java.version>25</java.version>
+        <kotlin.version>2.3.0</kotlin.version>
+        <vaadin.version>25.0.4</vaadin.version>
+        <maven.compiler.target>25</maven.compiler.target>
+        <commons-io.version>2.18.0</commons-io.version>
         <kotlin-annotations-version>24.1.0</kotlin-annotations-version>
+        <karibu-dsl.version>2.5.0</karibu-dsl.version>
     </properties>
 
     <dependencyManagement>
@@ -49,7 +50,7 @@
             <dependency>
                 <groupId>com.github.mvysny.karibudsl</groupId>
                 <artifactId>karibu-dsl-v23</artifactId>
-                <version>2.1.2</version>
+                <version>${karibu-dsl.version}</version>
                 <exclusions>
                     <exclusion>
                         <groupId>org.glassfish</groupId>
@@ -83,7 +84,7 @@
         <dependency>
             <groupId>com.github.mvysny.karibudsl</groupId>
             <artifactId>karibu-dsl-v23</artifactId>
-            <version>2.1.2</version>
+            <version>${karibu-dsl.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.glassfish</groupId>
@@ -317,29 +318,6 @@
                         <phase>test-compile</phase>
                         <goals>
                             <goal>testCompile</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.sonatype.central</groupId>
-                <artifactId>central-publishing-maven-plugin</artifactId>
-                <version>0.5.0</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <publishingServerId>central</publishingServerId>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.6</version>
-                <executions>
-                    <execution>
-                        <id>sign-artifacts</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>sign</goal>
                         </goals>
                     </execution>
                 </executions>
